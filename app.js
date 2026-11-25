@@ -1,0 +1,1 @@
+fetch('/api/tickets').then(r=>r.json()).then(d=>{document.getElementById('mvp-list').innerHTML=(d.items||[]).map(t=>`<li>${t.id}: ${t.title}</li>`).join('')}).catch(()=>{});
